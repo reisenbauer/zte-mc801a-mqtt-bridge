@@ -1,7 +1,7 @@
 version: '3'
 services:
   zte-sms:
-    image: build.upstream.at/zte/sms
+    image: docker pull ghcr.io/reisenbauer/zte-mc801a-mqtt-bridge:main
     container_name: zte-sms
     restart: unless-stopped
     ports:
