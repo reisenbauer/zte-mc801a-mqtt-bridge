@@ -1,7 +1,7 @@
 version: '3'
 services:
   zte-sms:
-    image: docker pull ghcr.io/reisenbauer/zte-mc801a-mqtt-bridge:main
+    image: ghcr.io/reisenbauer/zte-mc801a-mqtt-bridge:main
     container_name: zte-sms
     restart: unless-stopped
     ports:
@@ -9,6 +9,6 @@ services:
     environment:
       - ZTE_HOST=http://home.xdot.at:9090/
       - ZTE_PASS=1234567aA?
-      - ZTE_INTERVAL=2500
+      - ZTE_INTERVAL=30000
       - ZTE_MQTT_HOST=mqtt://100.100.100.200
       - ZTE_MQTT_TOPIC=inbound-sms

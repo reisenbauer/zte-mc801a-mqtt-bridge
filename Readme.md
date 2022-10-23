@@ -19,7 +19,7 @@ services:
     environment:
       - ZTE_HOST=http://192.168.0.1/
       - ZTE_PASS=highsecurepassword
-      - ZTE_INTERVAL=2500
+      - ZTE_INTERVAL=30000
       - ZTE_MQTT_HOST=mqtt://10.10.10.20
       - ZTE_MQTT_TOPIC=inbound-sms
 </pre>
@@ -29,7 +29,7 @@ services:
 |---|---|---|
 | ZTE_HOST  | http://192.168.0.1  | URI to connect your LTE Modem  |   |   |
 | ZTE_PASS  | highsecurepassword  | Password to connect your LTE Modem  |   |   |
-| ZTE_INTERVAL  |2500  | Interval your Modem is scanned for SMS (in ms)  |   |   |
+| ZTE_INTERVAL  |30000  | Interval your Modem is scanned for SMS (in ms)  |   |   |
 | ZTE_MQTT_HOST  | mqtt://10.10.10.20  | MQTT Broker  |   |   |
 | ZTE_MQTT_TOPIC  | sms  | MQTT Topic  |   |   |
 | ZTE_MQTT_USER  | app  | MQTT Username  |   |   |
