@@ -1,0 +1,14 @@
+version: '3'
+services:
+  zte-sms:
+    image: build.upstream.at/zte/sms
+    container_name: zte-sms
+    restart: unless-stopped
+    ports:
+      - "1099:3000"
+    environment:
+      - ZTE_HOST=http://home.xdot.at:9090/
+      - ZTE_PASS=1234567aA?
+      - ZTE_INTERVAL=2500
+      - ZTE_MQTT_HOST=mqtt://100.100.100.200
+      - ZTE_MQTT_TOPIC=inbound-sms
