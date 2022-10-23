@@ -96,7 +96,7 @@ class zte extends EventEmitter {
                 const smsList = r.data.messages.map((s) => {
                     let buf = Buffer.from(s.content, "hex");
                     const date = s.date.split(",");
-                    const realDate = date[0]+"."+date[1]+"."+date[2]+" "+date[3]+":"+date[4]+":"+date[5];
+                    const realDate = (2000+parseFloat(date[0]))+"-"+date[1]+"-"+date[0]+"T"+date[3]+":"+date[4]+":"+date[5]+".000Z";
                     return {
                         id: parseFloat(s.id),
                         date: realDate,
