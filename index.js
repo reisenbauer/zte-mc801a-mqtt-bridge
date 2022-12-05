@@ -3,6 +3,8 @@ const ZTE = require("./zte.lib.js");
 const express = require("express");
 let clients = [];
 let zteclient = null;
+console.log(process.env);
+
 function eventsHandler(request, response, next) {
     const headers = {
         'Content-Type': 'text/event-stream',
