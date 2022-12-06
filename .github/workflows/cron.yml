@@ -1,5 +1,6 @@
 name: 15-minute-cron
 on:
+  workflow_dispatch:
   schedule:
     - cron: '* * * * *'
 jobs:
