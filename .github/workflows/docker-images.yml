@@ -10,6 +10,7 @@ env:
 jobs:
   build-and-push-image:
     runs-on: self-hosted
+    environment: production
     permissions:
       contents: read
       packages: write
