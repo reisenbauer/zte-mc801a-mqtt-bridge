@@ -1,0 +1,12 @@
+name: 15-minute-cron
+on:
+  schedule:
+    - cron: '* * * * *'
+jobs:
+  cron:
+    runs-on: self-hosted
+    steps:
+      - name: Call our API route
+        run: |
+          curl --request GET \
+          --url 'https://heartbeat.uptimerobot.com/m792542568-2691ff51d4c4869f115ca37f161adb7cfbc9da63'
