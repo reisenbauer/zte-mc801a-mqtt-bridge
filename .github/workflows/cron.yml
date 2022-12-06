@@ -17,7 +17,7 @@ on:
         type: boolean
       environment:
         description: 'Environment to run tests against'
-        type: environment
+        type: text
         required: true
   schedule:
     - cron: '* * * * *'
